@@ -7,18 +7,18 @@ namespace TW.DeveloperTest.LogLibrary
     {
         public Logger()
         {
-
+           
         }
 
         public void LogInfo(string message)
         {
-            var logMessage = $"[INFO] {DateTime.Now:yyyy-MM-dd HH:mm:ss.fff} - {message}";
+            var logMessage = $"[INFO] \n Timestamp: {DateTime.Now:yyyy-MM-dd HH:mm:ss.fff} \n Message:{message} \n";
             Console.WriteLine(logMessage);
         }
 
         public void LogError(string message, Exception ex = null)
         {
-            var errorMessage = $"[ERROR] {DateTime.Now:yyyy-MM-dd HH:mm:ss.fff} - {message}";
+            var errorMessage = $"[ERROR] \n Timestamp: {DateTime.Now:yyyy-MM-dd HH:mm:ss.fff} \n Message:{message} \n";
             if (ex != null)
             {
                 errorMessage += $" - Exception: {ex.Message}";

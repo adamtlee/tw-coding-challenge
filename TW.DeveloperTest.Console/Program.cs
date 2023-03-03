@@ -31,13 +31,13 @@ namespace TW.DeveloperTest.ConsoleApp
 
                     //TODO replace with logging library
                     logger.LogInfo(result);
-                    Console.WriteLine($"output - {result}");
+                    // Console.WriteLine($"output - {result}");
                 }
                 catch (Exception e)
                 {
                     //TODO replace with logging library
                     logger.LogError(e.Message, e);
-                    Console.WriteLine($"error - {e.Message}");
+                    // Console.WriteLine($"error - {e.Message}");
                 }
                 
                 Thread.Sleep(500);
