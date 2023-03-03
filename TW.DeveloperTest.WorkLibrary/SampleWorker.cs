@@ -18,7 +18,7 @@ namespace TW.DeveloperTest.WorkLibrary
         public string GetResult()
         {
             int result = _random.Next(0, 100);
-
+            // int result = 100;
             if (result <= 95)
             {
                 //TODO Log to logging library successes
