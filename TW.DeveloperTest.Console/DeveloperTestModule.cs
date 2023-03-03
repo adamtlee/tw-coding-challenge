@@ -1,5 +1,6 @@
 ﻿using Ninject.Modules;
 using TW.DeveloperTest.Contracts;
+using TW.DeveloperTest.LogLibrary;
 using TW.DeveloperTest.WorkLibrary;
 
 namespace TW.DeveloperTest.ConsoleApp

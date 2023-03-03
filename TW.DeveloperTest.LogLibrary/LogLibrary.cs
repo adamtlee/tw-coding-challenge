@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TW.DeveloperTest.Contracts;
 
-namespace TW.DeveloperTest.WorkLibrary
+namespace TW.DeveloperTest.LogLibrary
 {
     public class Logger : ILogger
     {
         public Logger()
         {
-           
+
         }
 
         public void LogInfo(string message)
@@ -22,8 +18,8 @@ namespace TW.DeveloperTest.WorkLibrary
 
         public void LogError(string message, Exception ex = null)
         {
-            var errorMessage = $"[ERROR] {DateTime.Now:yyyy-MM-dd HH:mm:ss.fff} - {message}"; 
-            if(ex != null)
+            var errorMessage = $"[ERROR] {DateTime.Now:yyyy-MM-dd HH:mm:ss.fff} - {message}";
+            if (ex != null)
             {
                 errorMessage += $" - Exception: {ex.Message}";
             }

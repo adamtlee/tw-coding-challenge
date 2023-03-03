@@ -58,6 +58,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TW.DeveloperTest.LogLibrary\TW.DeveloperTest.LogLibrary.csproj">
+      <Project>{3EA45546-4DAE-40D5-BF5C-1C3268797F8D}</Project>
+      <Name>TW.DeveloperTest.LogLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TW.DeveloperTest.WorkLibrary\TW.DeveloperTest.WorkLibrary.csproj">
       <Project>{7c1a2041-9daa-4c11-a02f-01e1440c778c}</Project>
       <Name>TW.DeveloperTest.WorkLibrary</Name>
