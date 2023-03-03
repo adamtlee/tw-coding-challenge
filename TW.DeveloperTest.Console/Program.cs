@@ -10,6 +10,7 @@ namespace TW.DeveloperTest.ConsoleApp
         {
             bool run = true;
             IWorker worker = Ioc.Resolve<IWorker>();
+            ILogger logger = Ioc.Resolve<ILogger>();
 
             do
             {
@@ -29,6 +30,7 @@ namespace TW.DeveloperTest.ConsoleApp
                     var result = worker.GetResult();
 
                     //TODO replace with logging library
+                    logger.LogInfo(result);
                     Console.WriteLine($"output - {result}");
                 }
                 catch (Exception e)

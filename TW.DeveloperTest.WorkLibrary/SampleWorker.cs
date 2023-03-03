@@ -7,10 +7,12 @@ namespace TW.DeveloperTest.WorkLibrary
     public class SampleWorker : IWorker
     {
         readonly Random _random;
+        private readonly ILogger _logger;
 
-        public SampleWorker()
+        public SampleWorker(ILogger logger)
         {
             _random = new Random();
+            _logger = logger;
         }
 
         public string GetResult()
@@ -20,6 +22,7 @@ namespace TW.DeveloperTest.WorkLibrary
             if (result <= 95)
             {
                 //TODO Log to logging library successes
+                _logger.LogInfo(result.ToString());
                 return RandomString(result);
             }
 
