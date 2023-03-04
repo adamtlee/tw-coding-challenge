@@ -42,3 +42,5 @@ test/results-coverage.xml
 apps/CoreApi/TW.Core.API/jobs/
 
 *.json
+
+Output/*

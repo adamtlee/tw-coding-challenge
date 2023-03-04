@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using TW.DeveloperTest.Contracts;
 
 namespace TW.DeveloperTest.LogLibrary
@@ -10,6 +11,8 @@ namespace TW.DeveloperTest.LogLibrary
            
         }
 
+        private readonly string _logFilePath = $"C:/Repository/Toolwatch/csharp-interview-logging-master/Output/{DateTime.Now:yyyy-MM-dd}-log.txt";
+
         /// <summary>
         /// Logs an informational message to the console with a timestamp.
         /// </summary>
@@ -17,6 +20,7 @@ namespace TW.DeveloperTest.LogLibrary
         public void LogInfo(string message)
         {
             var logMessage = $"[INFO] \n Timestamp: {DateTime.Now:yyyy-MM-dd HH:mm:ss.fff} \n Message:{message} \n";
+            LogToFile(logMessage);
             Console.WriteLine(logMessage);
         }
 
@@ -28,11 +32,28 @@ namespace TW.DeveloperTest.LogLibrary
         public void LogError(string message, Exception ex = null)
         {
             var errorMessage = $"[ERROR] \n Timestamp: {DateTime.Now:yyyy-MM-dd HH:mm:ss.fff} \n Message:{message} \n";
+            LogToFile(errorMessage);
             if (ex != null)
             {
-                errorMessage += $" - Exception: {ex.Message}";
+                errorMessage += $"\n Exception: {ex.Message}";
+                LogToFile(errorMessage);
             }
             Console.WriteLine(errorMessage);
+        }
+
+        private void LogToFile(string message)
+        {
+            try
+            {
+                using(StreamWriter writer = new StreamWriter(_logFilePath, true))
+                {
+                    writer.WriteLine(message);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[ERROR] \n {DateTime.Now:yyyy-MM-dd HH:mm:ss.fff} \n {ex.ToString()}");
+            }
         }
     }
 }

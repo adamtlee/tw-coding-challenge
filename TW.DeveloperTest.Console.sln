@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TW.DeveloperTest.WorkLibrar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TW.DeveloperTest.Contracts", "TW.DeveloperTest.Contracts\TW.DeveloperTest.Contracts.csproj", "{D9A0EDFB-B5D1-49F9-9F61-11F146C68F0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TW.DeveloperTest.LogLibrary", "TW.DeveloperTest.LogLibrary\TW.DeveloperTest.LogLibrary.csproj", "{3EA45546-4DAE-40D5-BF5C-1C3268797F8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TW.DeveloperTest.LogLibrary", "TW.DeveloperTest.LogLibrary\TW.DeveloperTest.LogLibrary.csproj", "{3EA45546-4DAE-40D5-BF5C-1C3268797F8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

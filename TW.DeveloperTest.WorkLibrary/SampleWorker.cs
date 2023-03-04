@@ -26,6 +26,7 @@ namespace TW.DeveloperTest.WorkLibrary
                 return RandomString(result);
             }
 
+            _logger.LogError(result.ToString());
             throw new Exception($"Out of range exception - {result} > 95");
         }
 
